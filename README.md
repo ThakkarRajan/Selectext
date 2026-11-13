@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="ScreenOCR/Resources/Assets.xcassets/AppIcon.appiconset/icon_256x256.png" width="128" height="128" alt="Selectext app icon" />
+</p>
+
 # Selectext
 
 **Copy text from anything on screen.**
