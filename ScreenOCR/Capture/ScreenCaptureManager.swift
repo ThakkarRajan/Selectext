@@ -9,7 +9,7 @@ enum ScreenCaptureError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .permissionDenied:
-            return "Screen Recording is not enabled for ScreenOCR, or the app needs a restart after you enabled it."
+            return "Screen Recording is not enabled for Selectext, or the app needs a restart after you enabled it."
         case .captureFailed:
             return "Unable to capture the selected screen region."
         }
@@ -46,7 +46,7 @@ enum ScreenCaptureAccess {
         configuration.createsNewApplicationInstance = true
         NSWorkspace.shared.openApplication(at: Bundle.main.bundleURL, configuration: configuration) { _, error in
             if let error {
-                NSLog("ScreenOCR relaunch failed: \(error)")
+                NSLog("Selectext relaunch failed: \(error)")
                 return
             }
             DispatchQueue.main.async { NSApp.terminate(nil) }
@@ -117,7 +117,7 @@ struct ScreenCaptureManager {
         if !ScreenCaptureAccess.hasWorkingAccess() {
             return .permissionDenied
         }
-        NSLog("ScreenOCR ScreenCaptureKit error: \(error)")
+        NSLog("Selectext ScreenCaptureKit error: \(error)")
         return .captureFailed
     }
 }

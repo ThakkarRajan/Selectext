@@ -1,6 +1,8 @@
-# ScreenOCR
+# Selectext
 
-macOS menu bar app: drag a screen region → on-device OCR (Apple Vision) → text on the clipboard. No cloud, no account.
+**Copy text from anything on screen.**
+
+Menu bar screen OCR → clipboard. On-device Vision. No account.
 
 ## Features
 
@@ -26,20 +28,20 @@ There is no signed release binary in this repo yet — build and run locally (se
 ### Option A — Xcode
 
 1. Clone this repository.
-2. Open `ScreenOCR.xcodeproj` in Xcode.
-3. Select the **ScreenOCR** scheme and **My Mac**.
+2. Open `Selectext.xcodeproj` in Xcode.
+3. Select the **Selectext** scheme and **My Mac**.
 4. Run (**⌘R**).
 
 ### Option B — Terminal
 
 ```bash
-git clone https://github.com/ThakkarRajan/ScreenOCR.git
-cd ScreenOCR
-xcodebuild -scheme ScreenOCR -configuration Debug -destination 'platform=macOS' -derivedDataPath build build
-open build/Build/Products/Debug/ScreenOCR.app
+git clone https://github.com/ThakkarRajan/Selectext.git
+cd Selectext
+xcodebuild -scheme Selectext -configuration Debug -destination 'platform=macOS' -derivedDataPath build build
+open build/Build/Products/Debug/Selectext.app
 ```
 
-On first launch, ScreenOCR opens **Getting Started** and may ask for permissions (see below).
+On first launch, Selectext opens **Getting Started** and may ask for permissions (see below).
 
 ## How to use
 
@@ -59,13 +61,13 @@ You can change the shortcut in **Settings**.
 | **Accessibility** | Global hotkey via [KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts) (only if macOS prompts) |
 | **Notifications** | Optional success feedback (first run may prompt) |
 
-Grant **Screen Recording** in **System Settings → Privacy & Security → Screen Recording** and enable ScreenOCR.
+Grant **Screen Recording** in **System Settings → Privacy & Security → Screen Recording** and enable Selectext.
 
 ## Privacy
 
 - OCR runs **entirely on device**.
 - No network calls for recognition.
-- History is a **local JSON file** in `~/Library/Application Support/ScreenOCR/`.
+- History is a **local JSON file** in `~/Library/Application Support/Selectext/`.
 
 ## Architecture
 
@@ -84,20 +86,20 @@ SwiftUI + AppKit (`LSUIElement` — menu bar app). Source lives under `ScreenOCR
 
 ### Console: `linkd.autoShortcut`
 
-Harmless macOS noise around App Intents / Shortcuts registration. ScreenOCR does not integrate with Shortcuts.
+Harmless macOS noise around App Intents / Shortcuts registration. Selectext does not integrate with Shortcuts.
 
 ### App quits right after launch (macOS 26+)
 
-Check **Control Center → Menu Bar** and keep the ScreenOCR item **visible**. A hidden menu bar extra plus a Dock-less app can cause SwiftUI to exit; the app may show a Dock icon as a fallback.
+Check **Control Center → Menu Bar** and keep the Selectext item **visible**. A hidden menu bar extra plus a Dock-less app can cause SwiftUI to exit; the app may show a Dock icon as a fallback.
 
 ### Capture does nothing
 
-Confirm **Screen Recording** is enabled for ScreenOCR in System Settings, then try again.
+Confirm **Screen Recording** is enabled for Selectext in System Settings, then try again.
 
 ## Development
 
 ```bash
-xcodebuild -scheme ScreenOCR -configuration Debug -destination 'platform=macOS' -derivedDataPath build build
+xcodebuild -scheme Selectext -configuration Debug -destination 'platform=macOS' -derivedDataPath build build
 ```
 
 Agent and contributor notes: `AGENTS.md`, `cursor.md`. Issues and specs for maintainers may live under `.scratch/` and `docs/agents/`.

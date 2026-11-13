@@ -43,7 +43,7 @@ final class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
             : "Press \(shortcut) to capture. macOS will ask for Screen Recording the first time."
         deliver(
             NotificationPayload(
-                title: "ScreenOCR is running",
+                title: "Selectext is running",
                 subtitle: "Menu bar app · ready to capture text",
                 body: body,
                 playSound: false
@@ -56,7 +56,7 @@ final class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         deliver(
             NotificationPayload(
                 title: "You're all set",
-                subtitle: "ScreenOCR",
+                subtitle: "Selectext",
                 body: "Capture anytime with \(shortcut). Reopen tips from the menu bar → Getting Started…",
                 playSound: true
             )
@@ -67,7 +67,7 @@ final class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         deliver(
             NotificationPayload(
                 title: title,
-                subtitle: "ScreenOCR",
+                subtitle: "Selectext",
                 body: body,
                 playSound: true
             )

@@ -32,7 +32,7 @@ struct SettingsView: View {
                 Text("Permissions")
             } footer: {
                 if !appModel.screenCaptureGranted {
-                    Text("After turning it on in System Settings, quit and reopen ScreenOCR.")
+                    Text("After turning it on in System Settings, quit and reopen Selectext.")
                 }
             }
 

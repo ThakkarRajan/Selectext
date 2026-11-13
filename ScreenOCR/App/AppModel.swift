@@ -239,6 +239,6 @@ final class AppModel: ObservableObject {
             title: "Something went wrong",
             body: "\(context): \(message)"
         )
-        NSLog("ScreenOCR unexpected error (\(context)): \(error)")
+        NSLog("Selectext unexpected error (\(context)): \(error)")
     }
 }

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A70000000000000000000001"
-               BuildableName = "ScreenOCR.app"
-               BlueprintName = "ScreenOCR"
-               ReferencedContainer = "container:ScreenOCR.xcodeproj">
+               BuildableName = "Selectext.app"
+               BlueprintName = "Selectext"
+               ReferencedContainer = "container:Selectext.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A70000000000000000000001"
-            BuildableName = "ScreenOCR.app"
-            BlueprintName = "ScreenOCR"
-            ReferencedContainer = "container:ScreenOCR.xcodeproj">
+            BuildableName = "Selectext.app"
+            BlueprintName = "Selectext"
+            ReferencedContainer = "container:Selectext.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>

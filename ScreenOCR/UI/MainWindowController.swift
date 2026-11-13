@@ -25,7 +25,7 @@ enum MainWindowSection: String, CaseIterable, Identifiable {
     }
 }
 
-/// The window shown when the user opens ScreenOCR from Finder, Launchpad or Spotlight.
+/// The window shown when the user opens Selectext from Finder, Launchpad or Spotlight.
 @MainActor
 final class MainWindowController {
     static let shared = MainWindowController()
@@ -44,7 +44,7 @@ final class MainWindowController {
         }
 
         let window = AuxiliaryWindowPresenter.shared.makeWindow(
-            title: "ScreenOCR",
+            title: "Selectext",
             size: NSSize(width: 820, height: 580)
         ) {
             MainWindowView(appModel: appModel)
@@ -97,7 +97,7 @@ struct MainWindowView: View {
                 .frame(width: 22, height: 22)
                 .foregroundStyle(ScreenOCRDesign.brandGradient)
             VStack(alignment: .leading, spacing: 2) {
-                Text("ScreenOCR")
+                Text("Selectext")
                     .font(.headline)
                 Text(appModel.shortcutDisplay)
                     .font(.caption.monospacedDigit())

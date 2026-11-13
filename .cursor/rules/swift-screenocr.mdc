@@ -1,10 +1,10 @@
 ---
-description: Swift / SwiftUI patterns for ScreenOCR
+description: Swift / SwiftUI patterns for Selectext
 globs: ScreenOCR/**/*.swift
 alwaysApply: false
 ---
 
-# Swift (ScreenOCR)
+# Swift (Selectext)
 
 - `@MainActor` on `AppModel` and window controllers; bridge AppKit callbacks with `Task { @MainActor in }`.
 - Views take `appModel: AppModel` via `@ObservedObject` (not `environmentObject` unless already established in scene).

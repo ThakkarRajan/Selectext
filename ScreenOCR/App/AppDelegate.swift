@@ -24,7 +24,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillFinishLaunching(_ notification: Notification) {
         terminateOtherInstances()
-        ProcessInfo.processInfo.disableAutomaticTermination("ScreenOCR menu bar utility")
+        ProcessInfo.processInfo.disableAutomaticTermination("Selectext menu bar utility")
         MenuBarLaunchSupport.applyLaunchPolicy()
     }
 
@@ -62,7 +62,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Menu bar icon
 
     private func installStatusItem() {
-        let autosaveName = "ScreenOCRStatusItem"
+        let autosaveName = "SelectextStatusItem"
         // New icons are added at the far left of the extras, which on notched displays is
         // often hidden behind the notch. Until the user drags it, keep it near the right.
         let positionKey = "NSStatusItem Preferred Position \(autosaveName)"
@@ -76,7 +76,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             let image = NSImage(named: "MenuBarIcon")
             image?.isTemplate = true
             button.image = image
-            button.toolTip = "ScreenOCR clipboard"
+            button.toolTip = "Selectext — copy text from screen"
             button.target = self
             button.action = #selector(statusItemClicked(_:))
             button.sendAction(on: [.leftMouseUp, .rightMouseUp])

@@ -1,13 +1,13 @@
-# ScreenOCR — Cursor project rules
+# Selectext — Cursor project rules
 
-Lightweight **macOS menu bar** app (`ScreenOCR/`): select screen region → on-device **Vision OCR** → clipboard. No network for OCR.
+**Selectext** — copy text from anything on screen. Lightweight **macOS menu bar** app (`ScreenOCR/` source tree): select screen region → on-device **Vision OCR** → clipboard. No network for OCR.
 
 ## Stack
 
 - Swift 5, SwiftUI + AppKit where needed (overlays, `NSWindow`)
 - macOS 14+ (`LSUIElement` — menu bar first)
 - SPM: `KeyboardShortcuts` only
-- Xcode project: `ScreenOCR.xcodeproj`
+- Xcode project: `Selectext.xcodeproj` (scheme **Selectext** → `Selectext.app`)
 
 ## Repository layout
 
@@ -41,7 +41,7 @@ Lightweight **macOS menu bar** app (`ScreenOCR/`): select screen region → on-d
 4. **Capture UX** — show selection overlay even when permission pending; verify capture access after region is chosen.
 5. **Errors** — user-facing copy via `NotificationManager` + `statusMessage`; log unexpected errors with `NSLog`.
 6. **No network** — do not add cloud OCR or telemetry unless explicitly requested.
-7. **Xcode** — add new Swift files to `ScreenOCR.xcodeproj/project.pbxproj` when creating files.
+7. **Xcode** — add new Swift files to `Selectext.xcodeproj/project.pbxproj` when creating files.
 8. **Commits** — only when the user asks; never force-push `main`.
 
 ## UI rules
@@ -55,8 +55,8 @@ Lightweight **macOS menu bar** app (`ScreenOCR/`): select screen region → on-d
 
 ```bash
 cd /Users/rajan/Desktop/Github/screentext
-xcodebuild -scheme ScreenOCR -configuration Debug -destination 'platform=macOS' -derivedDataPath build build
-open build/Build/Products/Debug/ScreenOCR.app
+xcodebuild -scheme Selectext -configuration Debug -destination 'platform=macOS' -derivedDataPath build build
+open build/Build/Products/Debug/Selectext.app
 ```
 
 Do not commit `build/`, `DerivedData/`, `graphify-out/`, or `xcuserdata/`.

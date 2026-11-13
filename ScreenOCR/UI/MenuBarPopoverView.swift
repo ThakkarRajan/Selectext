@@ -60,7 +60,7 @@ struct MenuBarPopoverView: View {
                     .scaledToFit()
                     .frame(width: 18, height: 18)
                     .foregroundStyle(ScreenOCRDesign.brandGradient)
-                Text("ScreenOCR")
+                Text("Selectext")
                     .font(.headline)
             }
             Text("Select a clip to copy to your clipboard")

@@ -10,11 +10,11 @@ enum ScreenCapturePermissionAlert {
         alert.alertStyle = .warning
         alert.messageText = "Allow Screen Recording"
         alert.informativeText = """
-        ScreenOCR needs Screen Recording to read the region you select. Text is recognized \
+        Selectext needs Screen Recording to read the region you select. Text is recognized \
         on your Mac and never uploaded.
 
-        Turn on ScreenOCR in System Settings → Privacy & Security → Screen Recording. \
-        If it is already on, quit and reopen ScreenOCR.
+        Turn on Selectext in System Settings → Privacy & Security → Screen Recording. \
+        If it is already on, quit and reopen Selectext.
         """
         alert.addButton(withTitle: "Open System Settings")
         alert.addButton(withTitle: "Quit & Reopen")

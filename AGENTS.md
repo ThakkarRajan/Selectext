@@ -1,6 +1,6 @@
-# ScreenOCR (screentext)
+# Selectext
 
-Native macOS menu bar app: region capture → on-device Vision OCR → clipboard.
+Native macOS menu bar app: **Copy text from anything on screen.** Region capture → on-device Vision OCR → clipboard.
 
 **Cursor:** project rules, architecture, and build notes live in [`cursor.md`](./cursor.md). Cursor loads [`.cursor/rules/`](./.cursor/rules/) automatically.
 

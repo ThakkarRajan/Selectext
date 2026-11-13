@@ -10,6 +10,8 @@
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>Selectext</string>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
@@ -23,9 +25,9 @@
 	<key>LSUIElement</key>
 	<true/>
 	<key>NSScreenCaptureUsageDescription</key>
-	<string>ScreenOCR captures the region you select to extract text locally on your Mac.</string>
+	<string>Selectext captures the region you select to extract text locally on your Mac.</string>
 	<key>NSUserNotificationUsageDescription</key>
-	<string>ScreenOCR sends notifications when it first starts and if capture needs your attention.</string>
+	<string>Selectext sends notifications when it first starts and if capture needs your attention.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2026. All rights reserved.</string>
 </dict>

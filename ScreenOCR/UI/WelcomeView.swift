@@ -11,7 +11,7 @@ struct WelcomeView: View {
     @State private var pasteTest = ""
 
     private let pageCount = 4
-    static let sampleText = "Hello from ScreenOCR! Capture me."
+    static let sampleText = "Hello from Selectext! Capture me."
 
     private var triedCapture: Bool {
         guard let start = captureCountAtTryStart else { return false }
@@ -108,7 +108,7 @@ struct WelcomeView: View {
         VStack(alignment: .leading, spacing: 18) {
             pageHeading(
                 "Copy text from your screen",
-                detail: "ScreenOCR lives in the menu bar. OCR runs on your Mac only — nothing is uploaded."
+                detail: "Selectext lives in the menu bar. OCR runs on your Mac only — nothing is uploaded."
             )
 
             VStack(spacing: 0) {
@@ -202,7 +202,7 @@ struct WelcomeView: View {
             }
             .screenOCRCard()
 
-            Toggle("Show Getting Started when I open ScreenOCR", isOn: $showTutorialOnLaunch)
+            Toggle("Show Getting Started when I open Selectext", isOn: $showTutorialOnLaunch)
                 .toggleStyle(.switch)
         }
     }

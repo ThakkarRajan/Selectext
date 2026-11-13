@@ -65,7 +65,7 @@
 		A20000000000000000000024 /* FeatureWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureWindowController.swift; sourceTree = "<group>"; };
 		A20000000000000000000026 /* MenuBarPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPopoverView.swift; sourceTree = "<group>"; };
 		A20000000000000000000027 /* ScreenOCRDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenOCRDesign.swift; sourceTree = "<group>"; };
-		A30000000000000000000001 /* ScreenOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30000000000000000000001 /* Selectext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Selectext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,7 @@
 		A60000000000000000000003 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A30000000000000000000001 /* ScreenOCR.app */,
+				A30000000000000000000001 /* Selectext.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,9 +206,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A70000000000000000000001 /* ScreenOCR */ = {
+		A70000000000000000000001 /* Selectext */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A90000000000000000000003 /* Build configuration list for PBXNativeTarget "ScreenOCR" */;
+			buildConfigurationList = A90000000000000000000003 /* Build configuration list for PBXNativeTarget "Selectext" */;
 			buildPhases = (
 				A80000000000000000000001 /* Sources */,
 				A40000000000000000000001 /* Frameworks */,
@@ -218,12 +218,12 @@
 			);
 			dependencies = (
 			);
-			name = ScreenOCR;
+			name = Selectext;
 			packageProductDependencies = (
 				A50000000000000000000001 /* KeyboardShortcuts */,
 			);
-			productName = ScreenOCR;
-			productReference = A30000000000000000000001 /* ScreenOCR.app */;
+			productName = Selectext;
+			productReference = A30000000000000000000001 /* Selectext.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -241,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A90000000000000000000001 /* Build configuration list for PBXProject "ScreenOCR" */;
+			buildConfigurationList = A90000000000000000000001 /* Build configuration list for PBXProject "Selectext" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -257,7 +257,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A70000000000000000000001 /* ScreenOCR */,
+				A70000000000000000000001 /* Selectext */,
 			);
 		};
 /* End PBXProject section */
@@ -421,7 +421,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.screentext.ScreenOCR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.selectext.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -447,7 +447,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.screentext.ScreenOCR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.selectext.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -457,7 +457,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A90000000000000000000001 /* Build configuration list for PBXProject "ScreenOCR" */ = {
+		A90000000000000000000001 /* Build configuration list for PBXProject "Selectext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB0000000000000000000001 /* Debug */,
@@ -466,7 +466,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A90000000000000000000003 /* Build configuration list for PBXNativeTarget "ScreenOCR" */ = {
+		A90000000000000000000003 /* Build configuration list for PBXNativeTarget "Selectext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AB0000000000000000000003 /* Debug */,

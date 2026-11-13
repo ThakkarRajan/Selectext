@@ -6,11 +6,11 @@ final class OCRHistoryManager: ObservableObject {
 
     private let fileURL: URL
     private let maxEntries = 200
-    private let ioQueue = DispatchQueue(label: "ScreenOCR.history", qos: .utility)
+    private let ioQueue = DispatchQueue(label: "Selectext.history", qos: .utility)
 
     init() {
         let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        let folder = support.appendingPathComponent("ScreenOCR", isDirectory: true)
+        let folder = support.appendingPathComponent("Selectext", isDirectory: true)
         try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
         fileURL = folder.appendingPathComponent("history.json")
         load()
@@ -60,7 +60,7 @@ final class OCRHistoryManager: ObservableObject {
             do {
                 try data.write(to: url, options: .atomic)
             } catch {
-                NSLog("ScreenOCR history save failed: \(error)")
+                NSLog("Selectext history save failed: \(error)")
             }
         }
     }
