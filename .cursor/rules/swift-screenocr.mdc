@@ -1,0 +1,14 @@
+---
+description: Swift / SwiftUI patterns for ScreenOCR
+globs: ScreenOCR/**/*.swift
+alwaysApply: false
+---
+
+# Swift (ScreenOCR)
+
+- `@MainActor` on `AppModel` and window controllers; bridge AppKit callbacks with `Task { @MainActor in }`.
+- Views take `appModel: AppModel` via `@ObservedObject` (not `environmentObject` unless already established in scene).
+- Prefer existing managers (`RegionSelectionManager`, `OCRHistoryManager`, `CapturePipeline`) over duplicating logic in views.
+- Use `@AppStorage` for user-facing toggles already wired in `AppModel` / Settings.
+- Screen capture: `ScreenCaptureAccess` preflight; throw `ScreenCaptureError` from capture layer; surface via `AppModel` notifications.
+- OCR: `VNRecognizeTextRequest`, accurate mode, language list from `recognitionLanguages`.

@@ -1,0 +1,16 @@
+---
+description: ScreenOCR project context — follow cursor.md
+alwaysApply: true
+---
+
+# ScreenOCR
+
+Read and follow **`cursor.md`** at the repo root for architecture, agent/skills setup, and conventions.
+
+Quick constraints:
+
+- macOS menu-bar Swift app; on-device Vision OCR only; minimal scoped diffs.
+- `AppModel` coordinates capture → OCR → clipboard; auxiliary UI via `FeatureWindowController` / `TutorialWindowController`, not menu-only `openWindow`.
+- Permissions: one Screen Recording prompt per session; no repeated Accessibility prompts on capture shortcut.
+- Issues in `.scratch/`; see `docs/agents/`. Code graph in `graphify-out/` (gitignored).
+- New Swift files must be added to `ScreenOCR.xcodeproj`. No commits unless user asks.

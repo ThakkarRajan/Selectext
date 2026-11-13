@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* ScreenOCRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* ScreenOCRApp.swift */; };
+		A10000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* AppDelegate.swift */; };
+		A10000000000000000000003 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* AppModel.swift */; };
+		A10000000000000000000004 /* ScreenCaptureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* ScreenCaptureManager.swift */; };
+		A10000000000000000000005 /* RegionSelectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* RegionSelectionManager.swift */; };
+		A10000000000000000000006 /* RegionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* RegionSelectionView.swift */; };
+		A10000000000000000000007 /* TextRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* TextRecognitionService.swift */; };
+		A10000000000000000000008 /* ClipboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* ClipboardManager.swift */; };
+		A10000000000000000000009 /* ShortcutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* ShortcutManager.swift */; };
+		A1000000000000000000000A /* OCRHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000A /* OCRHistoryModel.swift */; };
+		A1000000000000000000000B /* OCRHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000B /* OCRHistoryManager.swift */; };
+		A1000000000000000000000C /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000C /* NotificationManager.swift */; };
+		A1000000000000000000000E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000E /* SettingsView.swift */; };
+		A1000000000000000000000F /* PreviewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000000000000000000000F /* PreviewWindow.swift */; };
+		A10000000000000000000010 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* HistoryView.swift */; };
+		A10000000000000000000012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* Assets.xcassets */; };
+		A10000000000000000000013 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = A50000000000000000000001 /* KeyboardShortcuts */; };
+		A10000000000000000000014 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* WelcomeView.swift */; };
+		A10000000000000000000015 /* LaunchSessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* LaunchSessionState.swift */; };
+		A10000000000000000000018 /* SafeContinuation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000019 /* SafeContinuation.swift */; };
+		A10000000000000000000019 /* CapturePipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000020 /* CapturePipeline.swift */; };
+		A10000000000000000000020 /* ScreenCapturePermissionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000021 /* ScreenCapturePermissionAlert.swift */; };
+		A10000000000000000000021 /* AppModelRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000022 /* AppModelRef.swift */; };
+		A10000000000000000000022 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000023 /* MainWindowController.swift */; };
+		A10000000000000000000023 /* FeatureWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000024 /* FeatureWindowController.swift */; };
+		A10000000000000000000025 /* MenuBarPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000026 /* MenuBarPopoverView.swift */; };
+		A10000000000000000000026 /* ScreenOCRDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000027 /* ScreenOCRDesign.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* ScreenOCRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenOCRApp.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		A20000000000000000000004 /* ScreenCaptureManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCaptureManager.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* RegionSelectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectionManager.swift; sourceTree = "<group>"; };
+		A20000000000000000000006 /* RegionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSelectionView.swift; sourceTree = "<group>"; };
+		A20000000000000000000007 /* TextRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognitionService.swift; sourceTree = "<group>"; };
+		A20000000000000000000008 /* ClipboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManager.swift; sourceTree = "<group>"; };
+		A20000000000000000000009 /* ShortcutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutManager.swift; sourceTree = "<group>"; };
+		A2000000000000000000000A /* OCRHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRHistoryModel.swift; sourceTree = "<group>"; };
+		A2000000000000000000000B /* OCRHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRHistoryManager.swift; sourceTree = "<group>"; };
+		A2000000000000000000000C /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		A2000000000000000000000E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A2000000000000000000000F /* PreviewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewWindow.swift; sourceTree = "<group>"; };
+		A20000000000000000000010 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		A20000000000000000000012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A20000000000000000000013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000014 /* ScreenOCR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenOCR.entitlements; sourceTree = "<group>"; };
+		A20000000000000000000015 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		A20000000000000000000016 /* LaunchSessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSessionState.swift; sourceTree = "<group>"; };
+		A20000000000000000000019 /* SafeContinuation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeContinuation.swift; sourceTree = "<group>"; };
+		A20000000000000000000020 /* CapturePipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePipeline.swift; sourceTree = "<group>"; };
+		A20000000000000000000021 /* ScreenCapturePermissionAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCapturePermissionAlert.swift; sourceTree = "<group>"; };
+		A20000000000000000000022 /* AppModelRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModelRef.swift; sourceTree = "<group>"; };
+		A20000000000000000000023 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		A20000000000000000000024 /* FeatureWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureWindowController.swift; sourceTree = "<group>"; };
+		A20000000000000000000026 /* MenuBarPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPopoverView.swift; sourceTree = "<group>"; };
+		A20000000000000000000027 /* ScreenOCRDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenOCRDesign.swift; sourceTree = "<group>"; };
+		A30000000000000000000001 /* ScreenOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A40000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000013 /* KeyboardShortcuts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A60000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A60000000000000000000002 /* ScreenOCR */,
+				A60000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A60000000000000000000002 /* ScreenOCR */ = {
+			isa = PBXGroup;
+			children = (
+				A60000000000000000000004 /* App */,
+				A60000000000000000000005 /* Capture */,
+				A60000000000000000000006 /* OCR */,
+				A60000000000000000000007 /* Clipboard */,
+				A60000000000000000000008 /* Shortcuts */,
+				A60000000000000000000009 /* History */,
+				A6000000000000000000000A /* Notifications */,
+				A6000000000000000000000B /* UI */,
+				A6000000000000000000000C /* Resources */,
+				A20000000000000000000013 /* Info.plist */,
+				A20000000000000000000014 /* ScreenOCR.entitlements */,
+			);
+			path = ScreenOCR;
+			sourceTree = "<group>";
+		};
+		A60000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000001 /* ScreenOCR.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A60000000000000000000004 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* ScreenOCRApp.swift */,
+				A20000000000000000000002 /* AppDelegate.swift */,
+				A20000000000000000000003 /* AppModel.swift */,
+				A20000000000000000000016 /* LaunchSessionState.swift */,
+				A20000000000000000000022 /* AppModelRef.swift */,
+				A20000000000000000000019 /* SafeContinuation.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A60000000000000000000005 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000004 /* ScreenCaptureManager.swift */,
+				A20000000000000000000005 /* RegionSelectionManager.swift */,
+				A20000000000000000000006 /* RegionSelectionView.swift */,
+				A20000000000000000000020 /* CapturePipeline.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		A60000000000000000000006 /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000007 /* TextRecognitionService.swift */,
+			);
+			path = OCR;
+			sourceTree = "<group>";
+		};
+		A60000000000000000000007 /* Clipboard */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000008 /* ClipboardManager.swift */,
+			);
+			path = Clipboard;
+			sourceTree = "<group>";
+		};
+		A60000000000000000000008 /* Shortcuts */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000009 /* ShortcutManager.swift */,
+			);
+			path = Shortcuts;
+			sourceTree = "<group>";
+		};
+		A60000000000000000000009 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				A2000000000000000000000A /* OCRHistoryModel.swift */,
+				A2000000000000000000000B /* OCRHistoryManager.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		A6000000000000000000000A /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				A2000000000000000000000C /* NotificationManager.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		A6000000000000000000000B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A2000000000000000000000E /* SettingsView.swift */,
+				A2000000000000000000000F /* PreviewWindow.swift */,
+				A20000000000000000000010 /* HistoryView.swift */,
+				A20000000000000000000021 /* ScreenCapturePermissionAlert.swift */,
+				A20000000000000000000023 /* MainWindowController.swift */,
+				A20000000000000000000024 /* FeatureWindowController.swift */,
+				A20000000000000000000026 /* MenuBarPopoverView.swift */,
+				A20000000000000000000027 /* ScreenOCRDesign.swift */,
+				A20000000000000000000015 /* WelcomeView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A6000000000000000000000C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000012 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A70000000000000000000001 /* ScreenOCR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A90000000000000000000003 /* Build configuration list for PBXNativeTarget "ScreenOCR" */;
+			buildPhases = (
+				A80000000000000000000001 /* Sources */,
+				A40000000000000000000001 /* Frameworks */,
+				A80000000000000000000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenOCR;
+			packageProductDependencies = (
+				A50000000000000000000001 /* KeyboardShortcuts */,
+			);
+			productName = ScreenOCR;
+			productReference = A30000000000000000000001 /* ScreenOCR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 2720;
+				TargetAttributes = {
+					A70000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A90000000000000000000001 /* Build configuration list for PBXProject "ScreenOCR" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A60000000000000000000001;
+			packageReferences = (
+				A50000000000000000000002 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
+			productRefGroup = A60000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A70000000000000000000001 /* ScreenOCR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A80000000000000000000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000012 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A80000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* ScreenOCRApp.swift in Sources */,
+				A10000000000000000000002 /* AppDelegate.swift in Sources */,
+				A10000000000000000000003 /* AppModel.swift in Sources */,
+				A10000000000000000000004 /* ScreenCaptureManager.swift in Sources */,
+				A10000000000000000000005 /* RegionSelectionManager.swift in Sources */,
+				A10000000000000000000006 /* RegionSelectionView.swift in Sources */,
+				A10000000000000000000007 /* TextRecognitionService.swift in Sources */,
+				A10000000000000000000008 /* ClipboardManager.swift in Sources */,
+				A10000000000000000000009 /* ShortcutManager.swift in Sources */,
+				A1000000000000000000000A /* OCRHistoryModel.swift in Sources */,
+				A1000000000000000000000B /* OCRHistoryManager.swift in Sources */,
+				A1000000000000000000000C /* NotificationManager.swift in Sources */,
+				A1000000000000000000000E /* SettingsView.swift in Sources */,
+				A1000000000000000000000F /* PreviewWindow.swift in Sources */,
+				A10000000000000000000010 /* HistoryView.swift in Sources */,
+				A10000000000000000000014 /* WelcomeView.swift in Sources */,
+				A10000000000000000000015 /* LaunchSessionState.swift in Sources */,
+				A10000000000000000000018 /* SafeContinuation.swift in Sources */,
+				A10000000000000000000019 /* CapturePipeline.swift in Sources */,
+				A10000000000000000000020 /* ScreenCapturePermissionAlert.swift in Sources */,
+				A10000000000000000000021 /* AppModelRef.swift in Sources */,
+				A10000000000000000000022 /* MainWindowController.swift in Sources */,
+				A10000000000000000000023 /* FeatureWindowController.swift in Sources */,
+				A10000000000000000000025 /* MenuBarPopoverView.swift in Sources */,
+				A10000000000000000000026 /* ScreenOCRDesign.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AB0000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 74ZTHKRVMX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB0000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 74ZTHKRVMX;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AB0000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ScreenOCR/ScreenOCR.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ScreenOCR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.screentext.ScreenOCR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AB0000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = ScreenOCR/ScreenOCR.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ScreenOCR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.screentext.ScreenOCR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A90000000000000000000001 /* Build configuration list for PBXProject "ScreenOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB0000000000000000000001 /* Debug */,
+				AB0000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A90000000000000000000003 /* Build configuration list for PBXNativeTarget "ScreenOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB0000000000000000000003 /* Debug */,
+				AB0000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A50000000000000000000002 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A50000000000000000000001 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A50000000000000000000002 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AA0000000000000000000001 /* Project object */;
+}

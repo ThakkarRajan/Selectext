@@ -1,0 +1,6 @@
+build/
+graphify-out/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.DS_Store
