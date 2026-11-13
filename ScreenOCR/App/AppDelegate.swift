@@ -1,4 +1,5 @@
 import AppKit
+import ApplicationServices
 
 enum MenuBarLaunchSupport {
     /// Control Center can hide menu bar items; on macOS 26 that can terminate accessory-only apps.
@@ -30,6 +31,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         installStatusItem()
+        registerOpenAndReopenAppleEvents()
+        DispatchQueue.main.async {
+            AppModelRef.current?.presentMainUIOnLaunchIfNeeded()
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             MenuBarLaunchSupport.applyLaunchPolicy()
         }
@@ -39,10 +44,39 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         AppModelRef.current?.syncPermissionsAfterSystemChange()
     }
 
-    /// Opening the app again from Finder, Launchpad or Spotlight while it runs.
+    /// Dock icon while a window is open (regular activation policy).
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        AppModelRef.current?.showMainWindow()
+        AppModelRef.current?.openMainWindowFromExternalLaunch()
         return true
+    }
+
+    private func registerOpenAndReopenAppleEvents() {
+        let manager = NSAppleEventManager.shared()
+        manager.setEventHandler(
+            self,
+            andSelector: #selector(handleOpenAppleEvent(_:withReply:)),
+            forEventClass: AEEventClass(kCoreEventClass),
+            andEventID: AEEventID(kAEOpenApplication)
+        )
+        manager.setEventHandler(
+            self,
+            andSelector: #selector(handleReopenAppleEvent(_:withReply:)),
+            forEventClass: AEEventClass(kCoreEventClass),
+            andEventID: AEEventID(kAEReopenApplication)
+        )
+    }
+
+    @objc private func handleOpenAppleEvent(_ event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
+        DispatchQueue.main.async {
+            AppModelRef.current?.presentMainUIOnLaunchIfNeeded()
+        }
+    }
+
+    /// Finder, Launchpad, or Spotlight while Selectext is already running.
+    @objc private func handleReopenAppleEvent(_ event: NSAppleEventDescriptor, withReply reply: NSAppleEventDescriptor) {
+        DispatchQueue.main.async {
+            AppModelRef.current?.openMainWindowFromExternalLaunch()
+        }
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
@@ -73,9 +107,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         item.autosaveName = autosaveName
         if let button = item.button {
-            let image = NSImage(named: "MenuBarIcon")
-            image?.isTemplate = true
-            button.image = image
+            if let image = NSImage(named: "MenuBarIcon") {
+                image.isTemplate = true
+                image.size = NSSize(width: 20, height: 20)
+                button.image = image
+            }
             button.toolTip = "Selectext — copy text from screen"
             button.target = self
             button.action = #selector(statusItemClicked(_:))
@@ -86,6 +122,6 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc private func statusItemClicked(_ sender: NSStatusBarButton) {
         guard let appModel = AppModelRef.current else { return }
-        MenuBarPopoverController.shared.toggle(from: sender, appModel: appModel)
+            MenuBarPopoverController.shared.toggle(from: sender, appModel: appModel)
     }
 }

@@ -8,11 +8,19 @@ final class OCRHistoryManager: ObservableObject {
     private let maxEntries = 200
     private let ioQueue = DispatchQueue(label: "Selectext.history", qos: .utility)
 
-    init() {
-        let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        let folder = support.appendingPathComponent("Selectext", isDirectory: true)
-        try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
-        fileURL = folder.appendingPathComponent("history.json")
+    init(storageFileURL: URL? = nil) {
+        if let storageFileURL {
+            fileURL = storageFileURL
+            try? FileManager.default.createDirectory(
+                at: storageFileURL.deletingLastPathComponent(),
+                withIntermediateDirectories: true
+            )
+        } else {
+            let support = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
+            let folder = support.appendingPathComponent("Selectext", isDirectory: true)
+            try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
+            fileURL = folder.appendingPathComponent("history.json")
+        }
         load()
     }
 

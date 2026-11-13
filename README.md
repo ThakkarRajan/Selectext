@@ -4,6 +4,8 @@
 
 Menu bar screen OCR → clipboard. On-device Vision. No account.
 
+**Brand:** app icon master `ScreenOCR/Resources/Branding/AppIcon-source.jpg` (1024×1024). Menu bar template: `Glyph.svg` / `MenuBarIcon.svg`.
+
 ## Features
 
 - **Region capture** — select any rectangle on any display
@@ -100,6 +102,10 @@ Confirm **Screen Recording** is enabled for Selectext in System Settings, then t
 
 ```bash
 xcodebuild -scheme Selectext -configuration Debug -destination 'platform=macOS' -derivedDataPath build build
+```
+
+```bash
+xcodebuild test -project Selectext.xcodeproj -scheme Selectext -configuration Debug -destination 'platform=macOS' -derivedDataPath build
 ```
 
 Agent and contributor notes: `AGENTS.md`, `cursor.md`. Issues and specs for maintainers may live under `.scratch/` and `docs/agents/`.

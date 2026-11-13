@@ -96,10 +96,24 @@ struct MenuBarPopoverView: View {
                 Text("This removes every saved capture and copied text and can't be undone.")
             }
 
-            actionRow("Preferences…", icon: "gearshape", shortcut: "⌘,") {
-                onClose()
-                NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
+            SettingsLink {
+                HStack(spacing: 10) {
+                    Image(systemName: "gearshape")
+                        .font(.callout)
+                        .foregroundStyle(Color.secondary)
+                        .frame(width: 18)
+                    Text("Preferences…")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text("⌘,")
+                        .font(.caption.monospacedDigit())
+                        .foregroundStyle(.tertiary)
+                }
+                .padding(.horizontal, 14)
+                .padding(.vertical, 9)
+                .contentShape(Rectangle())
             }
+            .buttonStyle(HoverRowButtonStyle())
+            .simultaneousGesture(TapGesture().onEnded { onClose() })
 
             actionRow("Open Full Window…", icon: "macwindow", shortcut: nil) {
                 onClose()

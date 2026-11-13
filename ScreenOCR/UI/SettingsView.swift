@@ -4,7 +4,6 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject var appModel: AppModel
-
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             VStack(alignment: .leading, spacing: 4) {
@@ -16,6 +15,12 @@ struct SettingsView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             Form {
+            Section {
+                OpenAtLoginToggle()
+            } header: {
+                Text("General")
+            }
+
             Section {
                 LabeledContent("Capture text:") {
                     CaptureShortcutRecorder(appModel: appModel)

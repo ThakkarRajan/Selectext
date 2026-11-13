@@ -73,15 +73,25 @@ final class AppModel: ObservableObject {
 
     func presentMainUIOnLaunch() {
         let completedWelcome = UserDefaults.standard.bool(forKey: "hasCompletedWelcome")
-        let showOnLaunch = UserDefaults.standard.object(forKey: "showTutorialOnLaunch") as? Bool ?? false
-        showMainWindow(section: !completedWelcome || showOnLaunch ? .gettingStarted : .clipboard)
+        showMainWindow(section: completedWelcome ? .clipboard : .gettingStarted)
+    }
+
+    /// Finder, Launchpad, Spotlight, and Dock send a reopen Apple event when the user opens the app.
+    func presentMainUIOnLaunchIfNeeded() {
+        guard !LaunchSessionState.didPresentMainWindowThisSession else { return }
+        LaunchSessionState.didPresentMainWindowThisSession = true
+        presentMainUIOnLaunch()
+    }
+
+    func openMainWindowFromExternalLaunch() {
+        showMainWindow()
     }
 
     private func scheduleLaunchPresentation() {
         Task { @MainActor in
             do {
-                try await Task.sleep(for: .milliseconds(400))
-                presentMainUIOnLaunch()
+                try await Task.sleep(for: .milliseconds(150))
+                presentMainUIOnLaunchIfNeeded()
                 let completedWelcome = UserDefaults.standard.bool(forKey: "hasCompletedWelcome")
                 if !completedWelcome, !LaunchSessionState.hasShownReadyNotice {
                     LaunchSessionState.hasShownReadyNotice = true

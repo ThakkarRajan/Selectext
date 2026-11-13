@@ -4,7 +4,6 @@ struct WelcomeView: View {
     @ObservedObject var appModel: AppModel
     let onFinish: () -> Void
     @AppStorage("hasCompletedWelcome") private var hasCompletedWelcome = false
-    @AppStorage("showTutorialOnLaunch") private var showTutorialOnLaunch = false
 
     @State private var page = 0
     @State private var captureCountAtTryStart: Int?
@@ -165,7 +164,7 @@ struct WelcomeView: View {
             .screenOCRCard()
             .overlay(
                 RoundedRectangle(cornerRadius: ScreenOCRDesign.cornerRadius)
-                    .strokeBorder(ScreenOCRDesign.brandGradient, style: StrokeStyle(lineWidth: 1.5, dash: [6, 4]))
+                    .strokeBorder(.quaternary, lineWidth: 1)
             )
 
             if !appModel.screenCaptureGranted {
@@ -202,8 +201,8 @@ struct WelcomeView: View {
             }
             .screenOCRCard()
 
-            Toggle("Show Getting Started when I open Selectext", isOn: $showTutorialOnLaunch)
-                .toggleStyle(.switch)
+            OpenAtLoginToggle()
+                .screenOCRCard()
         }
     }
 

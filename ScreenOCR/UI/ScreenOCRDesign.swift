@@ -3,12 +3,12 @@ import SwiftUI
 enum ScreenOCRDesign {
     static let cornerRadius: CGFloat = 12
     static let popoverWidth: CGFloat = 360
-    static let accent = Color(red: 0.35, green: 0.45, blue: 0.98)
-    static let accentSecondary = Color(red: 0.55, green: 0.38, blue: 0.95)
+    static let accent = Color(red: 0, green: 0.478, blue: 1.0)
+    static let accentSecondary = Color(red: 0, green: 0.388, blue: 0.855)
 
     static var brandGradient: LinearGradient {
         LinearGradient(
-            colors: [accent, accentSecondary],
+            colors: [accent, accent],
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
